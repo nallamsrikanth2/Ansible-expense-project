@@ -1,0 +1,10 @@
+- name: install the mysql server
+  ansible.builtin.dnf:
+    name: mysql-server
+    state: latest
+
+- name: start and enable the sql server
+  ansible.builtin.service:
+    name: mysqld
+    state: started
+    enabled: yes
